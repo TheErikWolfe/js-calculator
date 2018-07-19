@@ -1,0 +1,80 @@
+$sizeWidth: 80px;
+
+#calculator {
+	min-width: $sizeWidth * 4.7;
+	max-width: $sizeWidth * 4.7;
+	@extend .m-auto;
+	@extend .shadow;	
+}
+
+#display {
+	height: $sizeWidth / 1.75;
+	width: $sizeWidth * 4.15;
+	@extend .mb-2;
+	@extend .text-right;
+	@extend .rounded-0;
+	@extend .shadow-sm;
+	@extend .pt-1;
+	font-size: $sizeWidth / 3;
+
+	@extend .p-1;
+}
+
+.cursor {
+	font-size: $sizeWidth / 3;
+	display: inline-block;
+
+}
+
+.cursor:after {
+	content: '|';
+	//width: ;
+	font-size: $sizeWidth / 3;
+	//background: white;
+	opacity: 0;
+	display: inline-block;
+	animation: blink 1s linear infinite alternate;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.num {
+	background-color: #eee;
+}
+
+.func {
+	background-color: #ccc;
+}
+
+.dud {
+	background-color: white;
+	@extend .shadow-none;
+}
+
+.key {
+	@extend .shadow-sm;
+	width: $sizeWidth;
+	height: $sizeWidth / 2;
+	@extend .mb-1;
+
+}
+
+#enter {
+	@extend .btn-primary
+}
+
+h1 {
+	@extend .text-center;
+}
+
+
+
+
+@import "node_modules/bootstrap/scss/bootstrap";
